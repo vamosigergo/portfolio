@@ -274,9 +274,7 @@ h1 em { color: #c6c6c6; font-family: "Playfair Display", Georgia, serif; font-we
 
 }
 
-/* =========================================
-   Lábléc közösségi ikonok
-========================================= */
+
 
 .footer-left {
   display: flex;
@@ -298,12 +296,12 @@ h1 em { color: #c6c6c6; font-family: "Playfair Display", Georgia, serif; font-we
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #ffffff; /* Fehér ikonok */
+  color: #ffffff;
   font-size: 0.95rem;
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover effektus: felemelkedik és fehéren világít */
+
 .footer-social a:hover {
   background: var(--accent);
   color: #000000;
@@ -312,7 +310,7 @@ h1 em { color: #c6c6c6; font-family: "Playfair Display", Georgia, serif; font-we
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
 }
 
-/* Mobil nézet igazítása */
+
 @media (max-width: 800px) {
   .footer-left {
     flex-wrap: wrap;

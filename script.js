@@ -1,4 +1,4 @@
-/* A portfólió interakciói — nincs külső könyvtár, ezért GitHub Pages-en is azonnal működik. */
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
   const navToggle = document.querySelector(".nav-toggle");
@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
-  // --- AUTOMATIKUS GÖRGETÉSI ANIMÁCIÓK (SCROLL REVEAL) ---
-  // A főbb szekciókat és diveket automatikusan felruházzuk az animációhoz szükséges class-szal,
-  // amennyiben az HTML-ben nem lett volna kézzel hozzáadva.
+  
   const autoRevealSelectors = [
     ".feature-card",
     ".document-card",
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(autoRevealSelectors.join(", ")).forEach((el, index) => {
     if (!el.classList.contains("reveal")) {
       el.classList.add("reveal");
-      // Enyhe lépcsőzetes késleltetés a rácsokban lévő kártyáknak a finomabb megjelenésért
+      
       if (el.classList.contains("feature-card") || el.classList.contains("document-card")) {
         if (index % 2 !== 0) el.classList.add("reveal--late");
       }
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((element) => element.classList.add("is-visible"));
     if (journeyTrack) journeyTrack.classList.add("is-visible");
   } else {
-    // Görgetésre előbukkanó elemek figyelése
+    
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -82,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Tilt-efektus asztali eszközökön (finom egérérzékenységgel)
+ 
   if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
     document.querySelectorAll(".tilt-card").forEach((card) => {
       card.addEventListener("pointermove", (event) => {
